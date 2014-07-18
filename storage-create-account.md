@@ -19,7 +19,7 @@ Para crear una nueva cuenta de almacenamiento es necesario acceder [al panel de 
 ![Nombre de la cuenta de almacenamiento](images/storage-start-createAccount-Step4.png)
 ![Nombre de la cuenta de almacenamiento](images/storage-start-createAccount-Step5.png)
 
-- El siguiente paso es elegir [el tipo de redundancia que queremos emplear](storage-redundancy.html "Redundancia Azure Storage "). En nuestro caso seleccionaremos redundancia a nivel local ya que no es necesario tener redundancia geográfica para este caso.
+- El siguiente paso es elegir [el tipo de redundancia que queremos emplear](storage-redundancy.md "Redundancia Azure Storage "). En nuestro caso seleccionaremos redundancia a nivel local ya que no es necesario tener redundancia geográfica para este caso.
 
 ![Tipo de redundancia](images/storage-start-createAccount-Step7.png)
 
@@ -31,6 +31,6 @@ Para crear una nueva cuenta de almacenamiento es necesario acceder [al panel de 
  
 ![Greación de la cuenta](images/storage-start-createAccount-Step8.png)
 
--  Despuús de unos instantes, ya estara accesible para trabajar con ella.
+-  Después de unos instantes, ya estara accesible para trabajar con ella.
 
 ![Cuenta de almacenamiento](images/storage-start-createAccount-Step9.png)
