@@ -4,16 +4,14 @@ Azure Storage es el servicio de almacenamiento que te permite alojar tus datos d
 
 El elemento principal dentro del servicio de Azure Storage es la cuenta de almacentamiento. Una cuenta proporciona tres tipos básicos de almacenamiento:
 
-
 - Binary Large Objects (*blobs*) para nuestras ficheros, imágenes, vídeo, etc.
 - Tablas para nuestra información almacenada en formato no relacional.
 - Colas para el procesamiento de mensajes desde nuestros servicios y aplicaciones.
 
+### Siguientes apartados: 
 
-### Siguientes pasos
+- [Más detalles sobre los tipos de almacenamiento](storage-types.md "Tipos de almacenamiento Azure Storage") 
+- [Opciones de redundancia en el almacenamiento](storage-redundancy.md "Tipos de redundancia en Azure Storage") 
 
-- [Crear una cuenta de almacenamiento](storage-create-account.md "Crear una cuenta de almacenamiento")
-
-
-
-
+### Guías paso a paso 
+- [Crear una cuenta de almacenamiento](storage-crete-account.md "Crear una cuenta de almacenamiento") 
