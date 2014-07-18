@@ -31,6 +31,6 @@ Para crear una nueva cuenta de almacenamiento es necesario acceder [al panel de 
  
 ![Greación de la cuenta](images/storage-start-createAccount-Step8.png)
 
--  Despuús de unos instantes, ya estara accesible para trabajar con ella.
+-  Después de unos instantes, ya estara accesible para trabajar con ella.
 
 ![Cuenta de almacenamiento](images/storage-start-createAccount-Step9.png)
