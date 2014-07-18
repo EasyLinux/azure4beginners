@@ -14,4 +14,5 @@ El elemento principal dentro del servicio de Azure Storage es la cuenta de almac
 - [Opciones de redundancia en el almacenamiento](storage-redundancy.md "Tipos de redundancia en Azure Storage") 
 
 ### Guías paso a paso 
-- [Crear una cuenta de almacenamiento](storage-crete-account.md "Crear una cuenta de almacenamiento") 
+- [Crear una cuenta de almacenamiento](storage-create-account.md "Crear una cuenta de almacenamiento") 
+- [Crear un nuevo contenedor](storage-create-container.md "Crear un contenedor") 
