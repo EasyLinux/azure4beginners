@@ -12,7 +12,7 @@ El elemento principal dentro del servicio de Azure Storage es la cuenta de almac
 
 ### Siguientes pasos
 
-- [Crear una cuenta de almacenamiento](storage-crete-account.md "Crear una cuenta de almacenamiento")
+- [Crear una cuenta de almacenamiento](storage-create-account.md "Crear una cuenta de almacenamiento")
 
 
 
