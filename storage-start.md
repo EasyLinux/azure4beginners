@@ -10,8 +10,12 @@ El elemento principal dentro del servicio de Azure Storage es la cuenta de almac
 - Colas para el procesamiento de mensajes desde nuestros servicios y aplicaciones.
 
 
-### Siguientes pasos
+### Siguientes apartados:
 
+- [Más detalles sobre los tipos de almacenamiento](storage-types.md "Tipos de almacenamiento Azure Storage")
+- [Opciones de redundancia en el almacenamiento](storage-redundancy.md "Tipos de redundancia en Azure Storage")
+
+### Guías paso a paso
 - [Crear una cuenta de almacenamiento](storage-crete-account.md "Crear una cuenta de almacenamiento")
 
 
