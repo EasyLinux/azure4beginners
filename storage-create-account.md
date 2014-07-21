@@ -23,7 +23,7 @@ Para crear una nueva cuenta de almacenamiento es necesario acceder [al panel de 
 
 ![Tipo de redundancia](images/storage-start-createAccount-Step7.png)
 
-- Continuamos con la creación de un nuevo grupo de recursos. Los grupos de recursos nos permiten organizar de forma lógica los diferentes servicios que compongan nuestra solución dentro de Azure. Por ejemplo, para este IT Camp crearemos un grupo de recursos denominado "Linux-IT-Camp" que incluirá nuestra cuenta de almacenamiento y las máquinas virtuales que utilizaremos.
+- Continuamos con la creación de un nuevo grupo de recursos. Los grupos de recursos nos permiten organizar de forma lógica los diferentes servicios que compongan nuestra solución dentro de Azure. Por ejemplo, para este IT Camp crearemos un grupo de recursos denominado "Microsoft-IT-Camp" que incluirá nuestra cuenta de almacenamiento y las máquinas virtuales que utilizaremos.
 
 ![Grupo de recursos](images/storage-start-createAccount-Step6.png)
 
