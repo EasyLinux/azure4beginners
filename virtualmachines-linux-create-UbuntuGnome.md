@@ -6,19 +6,19 @@ Para crear una nueva máquina virtual con Ubuntu es necesario acceder [al panel 
 
 - Seleccionamos el botón de **New** en la parte inferior izquierda de la página.
 
-![Menú nuevo](virtualmachines-linux-create-UbuntuGnome-Step1.png)
+![Menú nuevo](images/virtualmachines-linux-create-UbuntuGnome-Step1.png)
 
 - Dentro de la nueva hoja que se despliega, buscamos la opción de **Ubuntu Server 14.04 LTS** y hacemos click. Es posible que haya una nueva versión disponible por lo que puede cambiar el nombre.
 
-![Creación máquina virtual](virtualmachines-linux-create-UbuntuGnome-Step2.png)
+![Creación máquina virtual](images/virtualmachines-linux-create-UbuntuGnome-Step2.png)
 
 - En el siguiente paso configuraremos el nombre de la máquina virtual y el usuario que tendrá permisos de root dentro de la máquina. La autenticación se realiza a traves de un mecanismo de clave pública, será necesario que dispongas de tu clave RSA OpenSSH para configurar el acceso. Dependiendo de tu sistema operativo podras obtener una clave de una u otra forma, utiliza tu buscador preferido para encontrar la forma de hacerlo.
 
-![Menú de inicio](virtualmachines-linux-create-UbuntuGnome-Step3.png)
+![Menú de inicio](images/virtualmachines-linux-create-UbuntuGnome-Step3.png)
 
 - Ahora seleccionaremos el tamaño de la máquina virtual. En este caso emplearemos la opción por defecto. Sin embargo, antes de escoger un tamaño comprueba primero las necesidades de las aplicaciones que vayas a ejecutar en ella.
 
-![Creación máquina virtual](virtualmachines-linux-create-UbuntuGnome-Step4.png)
+![Creación máquina virtual](images/virtualmachines-linux-create-UbuntuGnome-Step4.png)
 
 En la configuración opcional personalizaremos los campos de **Network** y **Storage Account** para emplear los que hemos creado en pasos anteriores de esta guía.
 
@@ -26,41 +26,41 @@ En primer lugar, configuramos la red.
 
 - Por defecto, el portal sugiere una basada en el nombre de nuestra máquina virtual; sin embargo, nosotros seleccionaremos la nuestra previamente creada. Para ello, seleccionamos el campo **Virtual Network** y buscamos la red *msft-itcamp-vnet* del listado de redes existentes. 
 
-![Creación máquina virtual](virtualmachines-linux-create-UbuntuGnome-Step5.png)
+![Creación máquina virtual](images/virtualmachines-linux-create-UbuntuGnome-Step5.png)
 
 - Una vez seleccionada, nos aparecerá la primera subred seleccionada. En nuestro caso, hacemos click y en las opciones que aparecen seleccionamos la subred de *Test*. 
 
-![Creación máquina virtual](virtualmachines-linux-create-UbuntuGnome-Step6.png)
+![Creación máquina virtual](images/virtualmachines-linux-create-UbuntuGnome-Step6.png)
 
 - En el último paso, necesitaremos escoger el dominio que emplearemos para poder conectarnos a nuestra máquina o publicar los servicios que ofrezca.  Por defecto, el portal sugiere uoa basada en el nombre de nuestra máquina virtual; sin embargo, nosotros seleccionaremos el nuestro propio.
 
-![Creación máquina virtual](virtualmachines-linux-create-UbuntuGnome-Step7.png)
+![Creación máquina virtual](images/virtualmachines-linux-create-UbuntuGnome-Step7.png)
 
 Tras estos pasos quedara configurado el apartado de red de nuestra máquina virtual.
 
-![Creación máquina virtual](virtualmachines-linux-create-UbuntuGnome-Step8.png)
+![Creación máquina virtual](images/virtualmachines-linux-create-UbuntuGnome-Step8.png)
 
 Ahora será momento de configurar el almacenamiento.
 
 - Hacemos click la opción de **Storage Account** y del listado de cuentas existentes selecciamos la creada previamente bajo el nombre de *msftitcamp*. Tras ello, quedara configurada.
 
-![Creación máquina virtual](virtualmachines-linux-create-UbuntuGnome-Step9.png)
+![Creación máquina virtual](images/virtualmachines-linux-create-UbuntuGnome-Step9.png)
 
 Para gestionar más fácil la máquina virtual dentro de los recursos que estamos usando en esta guía, el siguiente paso sera añadirla al grupo creado *Microsoft-IT-Camp*. Con eso, nuestra máquina quedara configurada por lo que procedemos a crearla seleccionando el botón de **Create**
 
-![Creación máquina virtual](virtualmachines-linux-create-UbuntuGnome-Step10.png)
+![Creación máquina virtual](images/virtualmachines-linux-create-UbuntuGnome-Step10.png)
 
 Esperaremos unos minutos a que se aprovisione la máquina y este disponible para su uso. 
 
-![Creación máquina virtual](virtualmachines-linux-create-UbuntuGnome-Step11.png)
+![Creación máquina virtual](images/virtualmachines-linux-create-UbuntuGnome-Step11.png)
 
 Cuando el proceso finalice se abrirá una nueva pantalla con la información de la máquina.
 
-![Creación máquina virtual](virtualmachines-linux-create-UbuntuGnome-Step12.png)
+![Creación máquina virtual](images/virtualmachines-linux-create-UbuntuGnome-Step12.png)
 
 Iniciaremos sesión a traves de SSH con nuestro cliente preferido. Recuerda configurar el acceso por clave en lugar de por contraseña. Una vez que accedas tendremos la consola disponible de nuestro Ubuntu para comenzar a trabajar.
 
-![Creación máquina virtual](virtualmachines-linux-create-UbuntuGnome-Step13.png)
+![Creación máquina virtual](images/virtualmachines-linux-create-UbuntuGnome-Step13.png)
 
 En primer lugar, añadimos el repositorio de xubuntu y luego actualizamos el listado de paquetes. Tras eso, instalamos el escritorio de Xfce:
 
@@ -108,23 +108,23 @@ El protocolo RDP utiliza por defecto el puerto 3389; sin embargo, las máquinas 
 
 - Seleccionamos la máquina virtual en nuestro Dashboard principal.
 
-![Añadir puerto](virtualmachines-linux-create-UbuntuGnome-RDP-Step1.png)
+![Añadir puerto](images/virtualmachines-linux-create-UbuntuGnome-RDP-Step1.png)
 
 - Buscamos la opción de **Endpoints** que mostrará únicamente el puerto 22 activado y hacemos click.
 
-![Añadir puerto](virtualmachines-linux-create-UbuntuGnome-RDP-Step2.png)
+![Añadir puerto](images/virtualmachines-linux-create-UbuntuGnome-RDP-Step2.png)
 
 - Seleccionamos la opción de **Add** y completamos la información que nos pide con los valores de *RDP* para el campo de **Endpoint**, *3389* para el campo de **Public Port** y *3389* para el campo de **Private Port** y seleccionamos **OK**
 
-![Añadir puerto](virtualmachines-linux-create-UbuntuGnome-RDP-Step3.png)
+![Añadir puerto](images/virtualmachines-linux-create-UbuntuGnome-RDP-Step3.png)
 
 Una vez finalizado, podemos abrir directamente nuestro cliente de Remote Desktop y realizar la conexión con la máquina virtual. 
 
-![Añadir puerto](virtualmachines-linux-create-UbuntuGnome-RDP-Step4.png)
+![Añadir puerto](images/virtualmachines-linux-create-UbuntuGnome-RDP-Step4.png)
 
 Tras introducir los datos de conexión, el escritorio estara disponible para trabajar con él.
 
-![Añadir puerto](virtualmachines-linux-create-UbuntuGnome-RDP-Step5.png)
+![Añadir puerto](images/virtualmachines-linux-create-UbuntuGnome-RDP-Step5.png)
 
 
 
