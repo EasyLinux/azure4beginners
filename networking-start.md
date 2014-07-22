@@ -1,6 +1,6 @@
 # Redes virtuales en Azure
 
-A la hora de trabajar con nuestras máquinas virtuales o servicios en la nube, es necesario que estos tengan asociada una red en la que se desplieguen y podamos interactuar con ellos. Por defecto, Azure los despliega usando una configuración propia de red y les asigna dos direcciones IPv4:
+A la hora de trabajar con nuestras máquinas virtuales o servicios en la nube, es necesario que estos tengan asociada una red en la que se desplieguen para que podamos interactuar con ellos. Por defecto, Azure realiza este despliegue empleando una configuración propia de red que les asigna dos direcciones IPv4:
 
 - **Dirección IP Privada Virtual** *(VIP)*: dirección aleatoria asociada al servicio dentro de los rangos públicos asignados por Microsoft a Azure. Es la dirección que emplearemos para acceder al recurso a traves de Internet. 
 - **Dirección IP Interna**: dirección aleatoria asociada al servicio dentro del rango interno de direccionamiento del datacenter. Se usa para la comunicación interna entre servicios o con la propia infraestructura de Azure. No es direccionable desde el exterior.
@@ -22,7 +22,9 @@ Gracias a ello logramos beneficios extras que la configuración por defecto no n
 Una vez vistos los principios básicos de la configuración de red puedes continuar con los siguientes apartados o guías. 
 
 ### Siguientes apartados: 
-
+- [Tipos de redes virtuales](networking-types.md "Tipos de redes virtuales")
 
 ### Guías paso a paso 
 - [Crear de una red virtual solo en Azure](networking-create-virtualNetwork-cloud.md "Crear una red virtual solo en Azure") 
+- [Crear de una red virtual punto a sitio](networking-create-virtualNetwork-point2site.md "Crear de una red virtual punto a sitio") 
+- [Crear de una red virtual sitio a sitio con OpenSwan](networking-create-virtualNetwork-site2site.md "Crear de una red virtual sitio a sitio con OpenSwan") 
