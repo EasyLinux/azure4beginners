@@ -75,6 +75,7 @@ El proceso tardará unos minutos mientras se descargan e instalan todos los paqu
 
 ## Conecntándonos a través de VNC
 
+\#TODO
 
 ## Conectándonos a través de Remote Desktop Protocol
 
