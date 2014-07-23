@@ -126,7 +126,7 @@ conn vpn
         left=100.74.238.102
         leftsubnet=100.74.238.0/24
         leftnexthop=%defaultroute
-        right=104.40.132.127
+        right=23.100.15.126
         rightsubnet=192.168.0.0/20
         ike=3des-sha1-modp1024,aes128-sha1-modp1024
         esp=3des-sha1,aes128-sha1
@@ -134,7 +134,7 @@ conn vpn
  
 ```
 
-OpenSwan describe los extremos de nuestra conexión VPN como *left* y *right*. El izuqierdo se trata de la dirección IP interna de la máquina virtual configurada con OpenSwan. El derecho, la IP pública de la misma con la red asociada en los pasos anteriores. Además de ello, también configuramos las diferentes opciones relacionadas con la autenticación del tunel. 
+OpenSwan describe los extremos de nuestra conexión VPN como *left* y *right*. El izuqierdo se trata de la dirección IP interna de la máquina virtual configurada con OpenSwan. El derecho, la IP pública del Gateway creado por Azure. Esta dirección deberemos consultarla ya que será la que tengamos que añadir en la variable *right* para que la conexión se establezca de forma correcta. El resto de parámetros están asociados con la autenticación del túnel.
 
 - Finalmente configuraremos la clave compartida, *Pre-Shared Key (PSK)*, disponible en el portal de Azure. Para ello modificaremos el siguiente fichero:
 
@@ -146,7 +146,7 @@ sudo vi /etc/ipsec.secrets
     
 ```bash
 #include /etc/ipsec.d/*.secrets
-100.74.238.102 104.40.132.127 : PSK "XXXXXXXXXXXXXXXXXXXX"
+100.74.238.102 23.100.15.126 : PSK "XXXXXXXXXXXXXXXXXXXX"
 ```
    Es importante mantener la sintaxis correcta para evitar errores: *IPLocal IPGateway : PSK "Clave compartida"*
    
@@ -160,7 +160,7 @@ sudo service ipsec restart
 sudo service ipsec status
 ```
 
-Tras establecer la conexión el portal de Azure reflejará los cambios indicando a su vez el trafico de entrada y salida que fluye a través de él.
+Si la conexión se establece de forma correcta el último comando nos indicara que hay un túnel disponible. En el caso de que aparezca el mensaje de *"No tunnels up* será necesario revisar los pasos anteriores de configuración. Tras establecer la conexión el portal de Azure reflejará los cambios indicando a su vez el trafico de entrada y salida que fluye a través de él.
 
  ![Menú nuevo](images/networking-create-virtualNetwork-site2site-Step11.png)
  

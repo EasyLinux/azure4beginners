@@ -46,26 +46,4 @@ La autenticación de los clientes con el gateway VPN se realiza a través de cer
 
 ![Menú crear red virtual](images/networking-create-virtualNetwork-point2site-Step9.png)
 
-Con esto ya tendremos configurado la parte de Azure. Ahora únicamente será necesario configurar nuestro cliente en Linux para acceder a la red.
-
-### Configurando el cliente SSTP en Linux
-
-Dadod que Linux no soporta por defecto el protocolo SSTP para conexiones VPN será necesario configurar un cliente que proporcione esa característica. Para ello, haremos uso del proyecto [SSTP Client](http://sourceforge.net/projects/sstp-client/files/ "SSTP Client") disponible en [Sourceforge](http://sourceforge.net "Sourceforge").
-
-Serán necesarios los siguientes paquetes:
-
-- network-manager-sstp_version_arch.de
-- network-manager-sstp-gnome_version_arch.deb
-- sstp-client_version_arch.deb
-- libsstp-client0_version_arch.deb
-
-Eligiendo la arquitectura, *arch*, que se ajusta a nuestra máquina y la versión la 0.9.6-1.
-
-http://heanet.dl.sourceforge.net/project/sstp-client/network-manager-sstp/0.9.6-1/network-manager-sstp_0.9.6-0ubuntu1_amd64.deb
-http://heanet.dl.sourceforge.net/project/sstp-client/network-manager-sstp/0.9.6-1/network-manager-sstp-gnome_0.9.6-0ubuntu1_amd64.deb
-
-
-http://freefr.dl.sourceforge.net/project/sstp-client/sstp-client/1.0.9/libsstp-client_1.0.9_amd64.deb
-http://freefr.dl.sourceforge.net/project/sstp-client/sstp-client/1.0.9/sstp-client_1.0.9_amd64.deb
-
- 
+Con esto ya tendremos configurado la parte de Azure. Ahora únicamente será necesario configurar descargarnos el configurado adecuado para nuestr versión Windows.

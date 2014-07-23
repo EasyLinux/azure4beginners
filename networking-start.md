@@ -26,5 +26,4 @@ Una vez vistos los principios básicos de la configuración de red puedes contin
 
 ### Guías paso a paso 
 - [Crear de una red virtual solo en Azure](networking-create-virtualNetwork-cloud.md "Crear una red virtual solo en Azure") 
-- [Crear de una red virtual punto a sitio](networking-create-virtualNetwork-point2site.md "Crear de una red virtual punto a sitio") 
 - [Crear de una red virtual sitio a sitio con OpenSwan](networking-create-virtualNetwork-site2site.md "Crear de una red virtual sitio a sitio con OpenSwan") 
