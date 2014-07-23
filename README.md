@@ -29,10 +29,10 @@
 	- Tipos de máquinas virtuales
 	- [Creación de una máquina virtual](virtualmachines-linux-create-UbuntuGnome.md "Creación de una máquina virtual") 
 	- [Gestión de los puertos de la máquina](virtualmachines-create-endpoints.md "Gestión de los puertos de la máquina")
-	- Grupos de afinidad
+	- [Grupos de afinidad](virtualmachines-affinityGroups.md "Grupos de afinidad")
 	- Grupos de disponibilidad
 		- Dominios de actualización y fallo
-	- Extensiones
+	- [Extensiones](virtualmachines-extensions.md "Extensiones")
 	- Creación de imágenes personalizadas
 		- [Capturar una imagen de una máquina virtual con Linux en Azure](virtualmachines-linux-create-linuxImage.md "Capturar una imagen de una máquina virtual con Linux en Azure")
 		- Subir máquinas on-premise
