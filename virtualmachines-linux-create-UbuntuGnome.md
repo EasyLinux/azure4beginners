@@ -62,7 +62,14 @@ Iniciaremos sesión a traves de SSH con nuestro cliente preferido. Recuerda conf
 
 ![Creación máquina virtual](images/virtualmachines-linux-create-UbuntuGnome-Step13.png)
 
-En primer lugar, añadimos el repositorio de xubuntu y luego actualizamos el listado de paquetes. Tras eso, instalamos el escritorio de Xfce:
+
+
+
+## Conectándonos a través de Remote Desktop Protocol
+
+Por defecto, Linux no incluye soporte a conexiones RDP. Para ello, será necesario instalar el servidor *xrdp* en la máquina virtual. En las últimas versiones de GNOME existe un problema con el uso de Remote Desktop que provoca una pantalla gris sobre la que no se puede realizar ningún tipo de operación. Si deseamos tener una conexión a través de RDP será necesario utilizar una imagen 12.02 o cambiar de escritorio a XFCE. En este caso, seleccionaremos le segunda opción.
+
+Añadimos el repositorio de xubuntu y luego actualizamos el listado de paquetes. Tras eso, instalamos el escritorio de Xfce:
 
 ```bash
 sudo add-apt-repository ppa:xubuntu-dev/xfce-4.10
@@ -72,14 +79,8 @@ sudo apt-get install xfce4
 
 El proceso tardará unos minutos mientras se descargan e instalan todos los paquetes necesarios dentro de la máquina virtual. Tras ello, ya tendremos nuestro Ubuntu con escritorio.
 
-
-## Conecntándonos a través de VNC
-
-\#TODO
-
-## Conectándonos a través de Remote Desktop Protocol
-
-Por defecto, Linux no incluye soporte a conexiones RDP. Para ello, será necesario instalar el servidor *xrdp* en la máquina virtual. Para ello, ejecutamos el siguiente comando:
+ 
+Para ello, ejecutamos el siguiente comando:
 
 ```bash
 sudo apt-get install xrdp
