@@ -1,8 +1,4 @@
-#Azure para principiantes
-Una guía básica de cómo empezar a utilizar los servicios de Microsoft Azure enfocado inicialmente para usuarios de entornos basados en GNU-Linux.
-
-
-### Índice de contenidos
+# Índice de contenidos
 
 1. Introducción a Microsoft Azure
     - ¿Qué es?
