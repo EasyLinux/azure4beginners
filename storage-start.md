@@ -1,3 +1,8 @@
+---
+layout: default
+title: Storage
+---
+
 # El servicio de almacenamiento de Azure Storage
 
 Azure Storage es el servicio de almacenamiento que te permite alojar tus datos directamente en la nube. El servicio se ajusta a tus necesidades de almacenamiento, desde pocos Gigabytes hasta Petabytes de información. Ofrece caracteristicas de alta disponibilidad y durabilidad a través de los mecanismos internos de copia y réplica de la información entre diferentes datacenters.
