@@ -13,13 +13,13 @@
     <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
     <![endif]-->
 
-    <title>Azure-basics-doc by keyonir</title>
+    <title>Azure para principiantes by keyonir</title>
   </head>
 
   <body>
     <header>
       <div class="inner">
-        <h1>Azure-basics-doc</h1>
+        <h1>Azure para principiantes</h1>
         <h2>Una guía básica de cómo empezar a utilizar los servicios de Microsoft Azure para usuarios de Linux </h2>
         <a href="https://github.com/keyonir/azure-basics-doc" class="button"><small>View project on</small>GitHub</a>
       </div>
@@ -29,17 +29,116 @@
       <div class="inner clearfix">
         <section id="main-content">
           <h1>
-<a name="azure-basics-doc" class="anchor" href="#azure-basics-doc"><span class="octicon octicon-link"></span></a>azure-basics-doc</h1>
-
-<p>Una guía básica de cómo empezar a utilizar los servicios de Microsoft Azure para usuarios de Linux</p>
-
-<hr><h1>
 <a name="%C3%8Dndice-de-contenidos" class="anchor" href="#%C3%8Dndice-de-contenidos"><span class="octicon octicon-link"></span></a>Índice de contenidos</h1>
 
 <ol>
-<li><a href="storage-start.md" title="Almacenamiento con Azure Storage">Almacenamiento con Azure Storage</a></li>
-<li><a href="networking-start.md" title="Networking con Azure Virtual Networks">Networking con Azure Virtual Networks</a></li>
-<li><a href="virtualmachines-start.md" title="Máquinas virtuales con Azure Virtual Machines">Máquinas virtuales con Azure Virtual Machines</a></li>
+<li>Introducción a Microsoft Azure
+
+<ul>
+<li>¿Qué es?</li>
+<li>¿Qué ofrece?</li>
+<li>Azure y su modelo de apertura</li>
+</ul>
+</li>
+<li>Primeros pasos con Azure
+
+<ul>
+<li>Registro</li>
+<li>El portal de gestión</li>
+<li>El portal de facturación</li>
+</ul>
+</li>
+<li>Elementos básicos de infraestructura:
+
+<ul>
+<li>
+<a href="storage-start.md" title="Configuración del almacenamiento">Configuración del almacenamiento</a>
+
+<ul>
+<li>
+<a href="storage-types.md" title="Tipos de almacenamiento Azure Storage">Tipos de almacenamiento</a> </li>
+<li><a href="storage-redundancy.md" title="Tipos de redundancia en Azure Storage">Opciones de redundancia</a></li>
+<li><a href="storage-remoteAccess.md" title="Acceso remoto a Azure Storage">Acceso remoto a los datos almacenados</a></li>
+<li>Accediendo al almacenamiento a través de red con Azure Files</li>
+</ul>
+</li>
+<li>
+<a href="networking-start.md" title="Configuración de la red">Configuración de la red</a>
+
+<ul>
+<li><a href="networking-types.md" title="Tipos de redes virtuales">Tipos de redes virtuales</a></li>
+<li><a href="networking-create-virtualNetwork-cloud.md" title="Crear una red virtual en Azure">Crear de una red virtual en Azure</a></li>
+<li>Creación de redes VPN
+
+<ol>
+<li>Conexión VPN Punto a Sitio</li>
+<li><a href="networking-create-virtualNetwork-site2site.md" title="Conexión VPN Sitio a Sitio con OpenSwan">Conexión VPN Sitio a Sitio con OpenSwan</a></li>
+</ol>
+</li>
+<li>Interconectando redes virtuales
+
+<ol>
+<li>Caso práctico en Azure</li>
+<li>Caso práctico con otras plataformas: AWS</li>
+</ol>
+</li>
+<li>Asignación de IPs estáticas públicas y privadas</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>
+<a href="virtualmachines-start.md" title="Despliegue de máquinas virtuales">Despliegue de máquinas virtuales</a>
+
+<ul>
+<li>
+<a href="virtualmachines-linux-supportedDistros.md" title="Soporte de Linux en máquinas virtuales">Soporte de Linux en máquinas virtualess</a> </li>
+<li>Tipos de máquinas virtuales</li>
+<li>
+<a href="virtualmachines-linux-create-UbuntuGnome.md" title="Creación de una máquina virtual">Creación de una máquina virtual</a> </li>
+<li><a href="virtualmachines-create-endpoints.md" title="Gestión de los puertos de la máquina">Gestión de los puertos de la máquina</a></li>
+<li>Grupos de afinidad</li>
+<li>Grupos de disponibilidad
+
+<ul>
+<li>Dominios de actualización y fallo</li>
+</ul>
+</li>
+<li>Extensiones</li>
+<li>Creación de imágenes personalizadas
+
+<ul>
+<li><a href="virtualmachines-linux-create-linuxImage.md" title="Capturar una imagen de una máquina virtual con Linux en Azure">Capturar una imagen de una máquina virtual con Linux en Azure</a></li>
+<li>Subir máquinas on-premise</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>Migración de máquinas a Azure
+
+<ul>
+<li>Caso práctico desde soluciones VMWare</li>
+<li>Caso práctico desde Amazon Web Services</li>
+</ul>
+</li>
+<li>Automatización de los procesos
+
+<ul>
+<li>La API Rest</li>
+<li>SDKs disponibles </li>
+<li>Las herramientas de CLI</li>
+<li>Integración con Puppet</li>
+<li>Integración con Chef</li>
+</ul>
+</li>
+<li>Evolución de IaaS a PaaS
+
+<ul>
+<li>Servicios cloud con Java, PHP, Python o Node.js</li>
+<li>Sitios Web con despliegue continuo desde Git, GitHub, TFS.</li>
+<li>Depliegue de soluciones como Wordpress, Umbraco, Joomla, Drupal.</li>
+</ul>
+</li>
 </ol>
         </section>
 
