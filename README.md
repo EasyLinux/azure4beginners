@@ -41,7 +41,7 @@
 6. Automatización de los procesos
 	- [La API Rest](automation-api-rest.md "La API Rest")
 	- [SDKs disponibles ](automation-sdks.md "SDKs disponibles ")
-	- Las herramientas de CLI
+	- [Las herramientas de CLI](automation-cli.md "Las herramientas de CLI")
 	- Integración con Chef
 7. Evolución de IaaS a PaaS
 	- Servicios cloud con Java, PHP, Python o Node.js
