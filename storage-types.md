@@ -1,3 +1,7 @@
+layout: default
+title: Tipos de almacenamiento
+---
+
 # Tipos de almacenamiento
 
 Azure Storage incluye tres tipos de servicio como ya hemos mencioando: blobs, tablas y colas. A continuación, veremos un resumen de qué ofrecen y cómo trabajar con cada uno de ellos.
