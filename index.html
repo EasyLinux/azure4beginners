@@ -1,164 +1,56 @@
-<!DOCTYPE html>
-<html>
-  <head>
-    <meta charset='utf-8'>
-    <meta http-equiv="X-UA-Compatible" content="chrome=1">
-    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-    <link href='https://fonts.googleapis.com/css?family=Architects+Daughter' rel='stylesheet' type='text/css'>
-    <link rel="stylesheet" type="text/css" href="stylesheets/stylesheet.css" media="screen" />
-    <link rel="stylesheet" type="text/css" href="stylesheets/pygment_trac.css" media="screen" />
-    <link rel="stylesheet" type="text/css" href="stylesheets/print.css" media="print" />
+---
+layout: default
+title: Õndice de contenidos
+---
 
-    <!--[if lt IE 9]>
-    <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
-    <![endif]-->
+# Õndice de contenidos
 
-    <title>Azure para principiantes by keyonir</title>
-  </head>
+1. IntroducciÛn a Microsoft Azure
+    - øQuÈ es?
+    - øQuÈ ofrece?
+    - Azure y su modelo de apertura
+2. Primeros pasos con Azure
+    - Registro
+	- El portal de gestiÛn
+	- El portal de facturaciÛn
+3. Elementos b·sicos de infraestructura:
+    - [ConfiguraciÛn del almacenamiento](storage-start.md "ConfiguraciÛn del almacenamiento")
+		- [Tipos de almacenamiento] (storage-types.md "Tipos de almacenamiento Azure Storage") 
+		- [Opciones de redundancia](storage-redundancy.md "Tipos de redundancia en Azure Storage")
+		- [Acceso remoto a los datos almacenados](storage-remoteAccess.md "Acceso remoto a Azure Storage")
+		- Accediendo al almacenamiento a travÈs de red con Azure Files
+	- [ConfiguraciÛn de la red](networking-start.md "ConfiguraciÛn de la red")
+	    - [Tipos de redes virtuales](networking-types.md "Tipos de redes virtuales")
+		- [Crear de una red virtual en Azure](networking-create-virtualNetwork-cloud.md "Crear una red virtual en Azure")
+		- CreaciÛn de redes VPN
+			- [ConexiÛn VPN Sitio a Sitio con OpenSwan](networking-create-virtualNetwork-site2site.md "ConexiÛn VPN Sitio a Sitio con OpenSwan")
+		- Interconectando redes virtuales
+			- Caso pr·ctico en Azure
+			- Caso pr·ctico con otras plataformas: AWS
+		- AsignaciÛn de IPs est·ticas p˙blicas y privadas
+4. [Despliegue de m·quinas virtuales](virtualmachines-start.md "Despliegue de m·quinas virtuales")
+    - [Soporte de Linux en m·quinas virtualess](virtualmachines-linux-supportedDistros.md "Soporte de Linux en m·quinas virtuales") 
+	- Tipos de m·quinas virtuales
+	- [CreaciÛn de una m·quina virtual](virtualmachines-linux-create-UbuntuGnome.md "CreaciÛn de una m·quina virtual") 
+	- [GestiÛn de los puertos de la m·quina](virtualmachines-create-endpoints.md "GestiÛn de los puertos de la m·quina")
+	- [Grupos de afinidad](virtualmachines-affinityGroups.md "Grupos de afinidad")
+	- [Grupos de disponibilidad](virtualmachines-availabilitySets.md "Grupos de disponibilidad")
+	- [Extensiones](virtualmachines-extensions.md "Extensiones")
+	- CreaciÛn de im·genes personalizadas
+		- [Capturar una imagen de una m·quina virtual con Linux en Azure](virtualmachines-linux-create-linuxImage.md "Capturar una imagen de una m·quina virtual con Linux en Azure")
+		- Subir m·quinas on-premise
+5. MigraciÛn de m·quinas a Azure
+	- Caso pr·ctico desde soluciones VMWare
+	- Caso pr·ctico desde Amazon Web Services
+6. AutomatizaciÛn de los procesos
+	- [La API Rest](automation-api-rest.md "La API Rest")
+	- [SDKs disponibles ](automation-sdks.md "SDKs disponibles ")
+	- [Las herramientas de CLI](automation-cli.md "Las herramientas de CLI")
+	- [IntegraciÛn con Chef](automation-chef.md "IntegraciÛn con Chef")
+7. EvoluciÛn de IaaS a PaaS
+	- Servicios cloud con Java, PHP, Python o Node.js
+	- Sitios Web con despliegue continuo desde Git, GitHub, TFS.
+	- Depliegue de soluciones como Wordpress, Umbraco, Joomla, Drupal.
 
-  <body>
-    <header>
-      <div class="inner">
-        <h1>Azure para principiantes</h1>
-        <h2>Una gu√≠a b√°sica de c√≥mo empezar a utilizar los servicios de Microsoft Azure para usuarios de Linux </h2>
-        <a href="https://github.com/keyonir/azure-basics-doc" class="button"><small>View project on</small>GitHub</a>
-      </div>
-    </header>
-
-    <div id="content-wrapper">
-      <div class="inner clearfix">
-        <section id="main-content">
-          <h1>
-<a name="%C3%8Dndice-de-contenidos" class="anchor" href="#%C3%8Dndice-de-contenidos"><span class="octicon octicon-link"></span></a>√çndice de contenidos</h1>
-
-<ol>
-<li>Introducci√≥n a Microsoft Azure
-
-<ul>
-<li>¬øQu√© es?</li>
-<li>¬øQu√© ofrece?</li>
-<li>Azure y su modelo de apertura</li>
-</ul>
-</li>
-<li>Primeros pasos con Azure
-
-<ul>
-<li>Registro</li>
-<li>El portal de gesti√≥n</li>
-<li>El portal de facturaci√≥n</li>
-</ul>
-</li>
-<li>Elementos b√°sicos de infraestructura:
-
-<ul>
-<li>
-<a href="storage-start.md" title="Configuraci√≥n del almacenamiento">Configuraci√≥n del almacenamiento</a>
-
-<ul>
-<li>
-<a href="storage-types.md" title="Tipos de almacenamiento Azure Storage">Tipos de almacenamiento</a> </li>
-<li><a href="storage-redundancy.md" title="Tipos de redundancia en Azure Storage">Opciones de redundancia</a></li>
-<li><a href="storage-remoteAccess.md" title="Acceso remoto a Azure Storage">Acceso remoto a los datos almacenados</a></li>
-<li>Accediendo al almacenamiento a trav√©s de red con Azure Files</li>
-</ul>
-</li>
-<li>
-<a href="networking-start.md" title="Configuraci√≥n de la red">Configuraci√≥n de la red</a>
-
-<ul>
-<li><a href="networking-types.md" title="Tipos de redes virtuales">Tipos de redes virtuales</a></li>
-<li><a href="networking-create-virtualNetwork-cloud.md" title="Crear una red virtual en Azure">Crear de una red virtual en Azure</a></li>
-<li>Creaci√≥n de redes VPN
-
-<ol>
-<li>Conexi√≥n VPN Punto a Sitio</li>
-<li><a href="networking-create-virtualNetwork-site2site.md" title="Conexi√≥n VPN Sitio a Sitio con OpenSwan">Conexi√≥n VPN Sitio a Sitio con OpenSwan</a></li>
-</ol>
-</li>
-<li>Interconectando redes virtuales
-
-<ol>
-<li>Caso pr√°ctico en Azure</li>
-<li>Caso pr√°ctico con otras plataformas: AWS</li>
-</ol>
-</li>
-<li>Asignaci√≥n de IPs est√°ticas p√∫blicas y privadas</li>
-</ul>
-</li>
-</ul>
-</li>
-<li>
-<a href="virtualmachines-start.md" title="Despliegue de m√°quinas virtuales">Despliegue de m√°quinas virtuales</a>
-
-<ul>
-<li>
-<a href="virtualmachines-linux-supportedDistros.md" title="Soporte de Linux en m√°quinas virtuales">Soporte de Linux en m√°quinas virtualess</a> </li>
-<li>Tipos de m√°quinas virtuales</li>
-<li>
-<a href="virtualmachines-linux-create-UbuntuGnome.md" title="Creaci√≥n de una m√°quina virtual">Creaci√≥n de una m√°quina virtual</a> </li>
-<li><a href="virtualmachines-create-endpoints.md" title="Gesti√≥n de los puertos de la m√°quina">Gesti√≥n de los puertos de la m√°quina</a></li>
-<li>Grupos de afinidad</li>
-<li>Grupos de disponibilidad
-
-<ul>
-<li>Dominios de actualizaci√≥n y fallo</li>
-</ul>
-</li>
-<li>Extensiones</li>
-<li>Creaci√≥n de im√°genes personalizadas
-
-<ul>
-<li><a href="virtualmachines-linux-create-linuxImage.md" title="Capturar una imagen de una m√°quina virtual con Linux en Azure">Capturar una imagen de una m√°quina virtual con Linux en Azure</a></li>
-<li>Subir m√°quinas on-premise</li>
-</ul>
-</li>
-</ul>
-</li>
-<li>Migraci√≥n de m√°quinas a Azure
-
-<ul>
-<li>Caso pr√°ctico desde soluciones VMWare</li>
-<li>Caso pr√°ctico desde Amazon Web Services</li>
-</ul>
-</li>
-<li>Automatizaci√≥n de los procesos
-
-<ul>
-<li>La API Rest</li>
-<li>SDKs disponibles </li>
-<li>Las herramientas de CLI</li>
-<li>Integraci√≥n con Puppet</li>
-<li>Integraci√≥n con Chef</li>
-</ul>
-</li>
-<li>Evoluci√≥n de IaaS a PaaS
-
-<ul>
-<li>Servicios cloud con Java, PHP, Python o Node.js</li>
-<li>Sitios Web con despliegue continuo desde Git, GitHub, TFS.</li>
-<li>Depliegue de soluciones como Wordpress, Umbraco, Joomla, Drupal.</li>
-</ul>
-</li>
-</ol>
-        </section>
-
-        <aside id="sidebar">
-          <a href="https://github.com/keyonir/azure-basics-doc/zipball/master" class="button">
-            <small>Download</small>
-            .zip file
-          </a>
-          <a href="https://github.com/keyonir/azure-basics-doc/tarball/master" class="button">
-            <small>Download</small>
-            .tar.gz file
-          </a>
-
-          <p class="repo-owner"><a href="https://github.com/keyonir/azure-basics-doc"></a> is maintained by <a href="https://github.com/keyonir">keyonir</a>.</p>
-
-          <p>This page was generated by <a href="https://pages.github.com">GitHub Pages</a> using the Architect theme by <a href="https://twitter.com/jasonlong">Jason Long</a>.</p>
-        </aside>
-      </div>
-    </div>
-
-  
-  </body>
-</html>
+	
+	
