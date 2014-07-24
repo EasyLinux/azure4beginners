@@ -39,10 +39,9 @@
 	- Caso práctico desde soluciones VMWare
 	- Caso práctico desde Amazon Web Services
 6. Automatización de los procesos
-	- La API Rest
-	- SDKs disponibles 
+	- [La API Rest](automation-api-rest.md "La API Rest")
+	- [SDKs disponibles ](automation-sdks.md "SDKs disponibles ")
 	- Las herramientas de CLI
-	- Integración con Puppet
 	- Integración con Chef
 7. Evolución de IaaS a PaaS
 	- Servicios cloud con Java, PHP, Python o Node.js
