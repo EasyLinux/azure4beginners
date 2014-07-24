@@ -18,11 +18,10 @@
 	    - [Tipos de redes virtuales](networking-types.md "Tipos de redes virtuales")
 		- [Crear de una red virtual en Azure](networking-create-virtualNetwork-cloud.md "Crear una red virtual en Azure")
 		- Creación de redes VPN
-			1. Conexión VPN Punto a Sitio
-			2. [Conexión VPN Sitio a Sitio con OpenSwan](networking-create-virtualNetwork-site2site.md "Conexión VPN Sitio a Sitio con OpenSwan")
+			- [Conexión VPN Sitio a Sitio con OpenSwan](networking-create-virtualNetwork-site2site.md "Conexión VPN Sitio a Sitio con OpenSwan")
 		- Interconectando redes virtuales
-			1. Caso práctico en Azure
-			2. Caso práctico con otras plataformas: AWS
+			- Caso práctico en Azure
+			- Caso práctico con otras plataformas: AWS
 		- Asignación de IPs estáticas públicas y privadas
 4. [Despliegue de máquinas virtuales](virtualmachines-start.md "Despliegue de máquinas virtuales")
     - [Soporte de Linux en máquinas virtualess](virtualmachines-linux-supportedDistros.md "Soporte de Linux en máquinas virtuales") 
@@ -42,7 +41,7 @@
 	- [La API Rest](automation-api-rest.md "La API Rest")
 	- [SDKs disponibles ](automation-sdks.md "SDKs disponibles ")
 	- [Las herramientas de CLI](automation-cli.md "Las herramientas de CLI")
-	- Integración con Chef
+	- [Integración con Chef](automation-chef.md "Integración con Chef")
 7. Evolución de IaaS a PaaS
 	- Servicios cloud con Java, PHP, Python o Node.js
 	- Sitios Web con despliegue continuo desde Git, GitHub, TFS.
