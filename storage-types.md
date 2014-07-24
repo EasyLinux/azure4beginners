@@ -1,3 +1,4 @@
+---
 layout: default
 title: Tipos de almacenamiento
 ---
