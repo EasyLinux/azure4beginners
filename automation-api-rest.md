@@ -1,3 +1,6 @@
+---
+layout: default
+---
 # La API REST
 
 El portal de gestión de Azure permite realizar la mayor parte de las tareas relacionadas con la creación, modificación y mantenimiento de los servicios que tenemos desplegados. Todo ello implica en acceder a través del navegador e interactuar directamente con él.  Esto puede resultar suficiente cuando se trabaja a pequeña escala en escenarios de desarrollo o de pruebas; sin embargo, segun aumenta el número de servicios es necesario empezar a utilizar herramientas que permitan automatizar los procesos.

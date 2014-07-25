@@ -1,3 +1,6 @@
+---
+layout: default
+---
 # Redes virtuales en Azure
 
 A la hora de trabajar con nuestras máquinas virtuales o servicios en la nube, es necesario que estos tengan asociada una red en la que se desplieguen para que podamos interactuar con ellos. Por defecto, Azure realiza este despliegue empleando una configuración propia de red que les asigna dos direcciones IPv4:
@@ -22,8 +25,8 @@ Gracias a ello logramos beneficios extras que la configuración por defecto no n
 Una vez vistos los principios básicos de la configuración de red puedes continuar con los siguientes apartados o guías. 
 
 ### Siguientes apartados: 
-- [Tipos de redes virtuales](networking-types.md "Tipos de redes virtuales")
+- [Tipos de redes virtuales](networking-types "Tipos de redes virtuales")
 
 ### Guías paso a paso 
-- [Crear de una red virtual solo en Azure](networking-create-virtualNetwork-cloud.md "Crear una red virtual solo en Azure") 
-- [Crear de una red virtual sitio a sitio con OpenSwan](networking-create-virtualNetwork-site2site.md "Crear de una red virtual sitio a sitio con OpenSwan") 
+- [Crear de una red virtual solo en Azure](networking-create-virtualNetwork-cloud "Crear una red virtual solo en Azure") 
+- [Crear de una red virtual sitio a sitio con OpenSwan](networking-create-virtualNetwork-site2site "Crear de una red virtual sitio a sitio con OpenSwan") 

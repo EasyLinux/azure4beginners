@@ -1,3 +1,6 @@
+---
+layout: default
+---
 #Tipos de redes virtuales
 
 A la hora de trabajar con redes virtuales podemos configurar tres tipos diferentes segun las necesidades que tengamos:

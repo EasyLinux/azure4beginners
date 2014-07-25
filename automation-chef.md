@@ -1,3 +1,6 @@
+---
+layout: default
+---
 # Integración con Chef
 
 Azure permite integrar dentro de las máquinas virtuales que se despliegan tanto Windows como Linux el cliente de Chef. Esto se realiza a traves de las [extensiones disponibles](virtualmachines-extensions.md "Extensions Máquinas Virtuales") dentro de Azure.
@@ -19,23 +22,23 @@ Para crear una nueva máquina virtual es necesario acceder [al panel de gestión
 
 - Seleccionamos del menú  inferior la opción de **New>Compute>Virtual Machine>From Gallery**
 
-![Menú nuevo](images/automation-chef-Step1.png)
+![Menú nuevo](../images/automation-chef-Step1.png)
 
 - Dentro de la galería seleccionaremos una imagen Linux, en este caso seleccionaremos una con la última versión de **Ubuntu**.
 
-![Menú nuevo](images/automation-chef-Step2.png)
+![Menú nuevo](../images/automation-chef-Step2.png)
 
 - Completamos la configuración de la máquina virtual con el nombre, el tamaño y los datos de acceso a la misma.
 
-![Menú nuevo](images/automation-chef-Step3.png)
+![Menú nuevo](../images/automation-chef-Step3.png)
 
 - A continuación hacemos lo mismo con los detalles del servicio donde sera desplegada, la red, la cuenta de almacenamiento y los extremos que estarán disponibles.
 
-![Menú nuevo](images/automation-chef-Step4.png)
+![Menú nuevo](../images/automation-chef-Step4.png)
 
 - Tras ello, es donde tendremos que seleccionar que queremos que la máquina incluya la extensión de Chef. Esta extensión será la que instalará el cliente de Chef en su interior y le proporcionara los ficheros de información que tenemos que introducir: el **client.rb** y la **clave PEM**. El campo **Run List** nos permite especificar la receta o recetas que queremos que se ejecuten para configurar la máquina virtual. 
 
-![Menú nuevo](images/automation-chef-Step5.png)
+![Menú nuevo](../images/automation-chef-Step5.png)
 
 - Una vez completado los campos anteriores procedemos a finalizar el asistente y nuestra máquina se aprovisionara, se instalará la extensión y se le aplicarán las recetas que le hemos configurado. Tras ello, aparecerá directamente en nuestro servidor Enterprise Chef de forma similar a otras que tengamos anteriormente.
 

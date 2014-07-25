@@ -1,3 +1,6 @@
+---
+layout: default
+---
 # SDKs multiplataforma para desarrolladores
 
 Para facilitar a los desarrolladores la creación de nuevas aplicaciones haciendo uso de los servicios que proporciona Azure, existe una colección de SDKs para diferentes tecnologías que exponen los servicios de la API REST de una forma más directa. Con ellos, no sera necesario gestionar a bajo nivel los detalles de implementación de las consultas REST sino que ya vendrá implementado dentro del SDK y expuestos a través de métodos y clases.

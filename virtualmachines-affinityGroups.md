@@ -1,3 +1,6 @@
+---
+layout: default
+---
 # Grupos de afinidad
 
 A la hora de desplegar nuestras máquinas virtuales o servicios en la nube, por defecto, se realizarán a nivel de región; es decir, a uno de los datacenters disponibles a nivel global. Esto puede provocar que dos máquinas virtuales que tienen que comunicarse de forma frecuente entre ellas terminen siendo desplegadas cada una en diferentes extremos del datacenter. A pesar de las altas velocidades de transmisión dentro del datacenter, la distancia entre ambas provocará un pequeño retraso relacionado con la propogación de la información entre ambos extremos.
@@ -10,12 +13,12 @@ Para crear un nuevo grupo de afinidad es necesario acceder [al panel de gestión
 
 - Seleccionamos la pestaña de **Settings** del menú lateral izquierdo
 
-![Menú nuevo](images/virtualmachines-affinityGroup-Step1.png)
+![Menú nuevo](../images/virtualmachines-affinityGroup-Step1.png)
 
 - En el menú superior seleccionamos la pestaña de **Affinity Groups**
 
-![Menú nuevo](images/virtualmachines-affinityGroup-Step2.png)
+![Menú nuevo](../images/virtualmachines-affinityGroup-Step2.png)
 
 - Tras ello, en el menú inferior seleccionamos la opción de **Add**. Necesitaremos completar el nombre del grupo de trabajo en el campo **Name**, una descripción general del uso de dicho grupo de afiniddad en el campo **Description** y finalmente seleccionar la región sobre la que queremos usarlo. Una vez aceptado estará disponible para usarlo.
 
-![Menú nuevo](images/virtualmachines-affinityGroup-Step3.png)
+![Menú nuevo](../images/virtualmachines-affinityGroup-Step3.png)

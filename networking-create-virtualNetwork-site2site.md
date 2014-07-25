@@ -1,3 +1,6 @@
+---
+layout: default
+---
 #Crear una red virtual sitio a sitio con OpenSwan
 
 A la hora de crear una red virtual sitio a sitio es posible realizarla a traves de alguno de los dispositivos hardware soportados o utilizando algún software VPN que lo permita. En el caso de Linux, configuraremos una red virtual sitio a sitio empleando OpenSwan. Para facilitar el trabajo emplearemos una máquina virtual creada en Azure que simule nuestro equipo local. El escenario será el siguiente:
@@ -14,15 +17,15 @@ Para crear una nueva máquina virtual es necesario acceder [al panel de gestión
 
 - Seleccionamos la opción de **New** en la parte inferior izquierda y tras ello: **Compute > Virtual Machine > Quick Create**. Completando los campos para desplegar la imagen de Ubuntu Server 14.04.
 
-![Menú nuevo](images/networking-create-virtualNetwork-site2site-Step1.png)
+![Menú nuevo](../images/networking-create-virtualNetwork-site2site-Step1.png)
 
 - Una vez que la máquina se ha creado será necesario que abramos los puertos **500** y **4500** del protocolo **UPD** para el correcto funcionamiento del protocolo IPSec. Para ello, accedemos a la pestaña de **Endpoints** y los añadimos.
 
-![Menú nuevo](images/networking-create-virtualNetwork-site2site-Step2.png)
+![Menú nuevo](../images/networking-create-virtualNetwork-site2site-Step2.png)
 
 - El siguiente paso será fijarnos en las IPs que Azure le ha asignado. Sera necesario tanto la pública, accesible desde Internet; como la interna, accesible desde el datacenter. Es posible encontrarlas en la página de información de la máquina virtual.
  
-![Menú nuevo](images/networking-create-virtualNetwork-site2site-Step3.png)
+![Menú nuevo](../images/networking-create-virtualNetwork-site2site-Step3.png)
  
 ### Configuración de la red local
 
@@ -30,15 +33,15 @@ Para establecer la conexión sitio a sitio será necesario configurar dentro del
 
 - Para ello, accedemos al menú de **Networks** y tras ello a la pestaña de **Local Networks**. Hacemos click en **Add new local network**
 
-![Menú nuevo](images/networking-create-virtualNetwork-site2site-Step4.png)
+![Menú nuevo](../images/networking-create-virtualNetwork-site2site-Step4.png)
 
 - Le damos el nombre de nuestra red, *OpenSwan*, y fijamos como **VPN Device IP Address** la IP pública de la máquina virtual que acabamos de crear.
 
-![Menú nuevo](images/networking-create-virtualNetwork-site2site-Step5.png)
+![Menú nuevo](../images/networking-create-virtualNetwork-site2site-Step5.png)
   
 - En el rango de direcciones de la red local incluiremos el de la dirección privadad e nuestra máquina virtual. Podemos configurar un rango /32 o uno más amplio. Sim embargo, cabe recordad que debido al modelo de seguridad de Azure no seremos capaces de enrutar hacia esas direcciones IP a no ser que alguno de nuestros servicios disponga de una en ese rango.  
 
-![Menú nuevo](images/networking-create-virtualNetwork-site2site-Step6.png)
+![Menú nuevo](../images/networking-create-virtualNetwork-site2site-Step6.png)
 
 
 ### Configuración de la red sitio a sitio.
@@ -47,19 +50,19 @@ Una vez que tenemos nuestra máquina con OpenSwan y la red local necesitamos cre
 
 - Hacemos click en el menú de **New>Virtual Network>Quick Create** y completamos los campos que nos piden. 
 
-![Menú nuevo](images/networking-create-virtualNetwork-site2site-Step7.png)
+![Menú nuevo](../images/networking-create-virtualNetwork-site2site-Step7.png)
  
 - En unos segundos estará creada. La seleccionamos de la lista y nos dirigimos a la pestaña **Configure**
 
-![Menú nuevo](images/networking-create-virtualNetwork-site2site-Step8.png)
+![Menú nuevo](../images/networking-create-virtualNetwork-site2site-Step8.png)
 
 - Dentro de ella, seleccionamos la opción de **Connect to the local network** y guardamos la configuración haciendo click en **Save**. De esta forma, configuraremos los datos del gateway de la red.
 
-![Menú nuevo](images/networking-create-virtualNetwork-site2site-Step9.png)
+![Menú nuevo](../images/networking-create-virtualNetwork-site2site-Step9.png)
 
 - Volvemos al **Dashboard** de la red recién creada y seleccionaremos **Create Gateway>Static routing**. Mientras se crea procederemos a configurar OpenSwan.
 
-![Menú nuevo](images/networking-create-virtualNetwork-site2site-Step10.png)
+![Menú nuevo](../images/networking-create-virtualNetwork-site2site-Step10.png)
 
  
 ### Configuración de OpenSwan.
@@ -162,7 +165,7 @@ sudo service ipsec status
 
 Si la conexión se establece de forma correcta el último comando nos indicara que hay un túnel disponible. En el caso de que aparezca el mensaje de *"No tunnels up* será necesario revisar los pasos anteriores de configuración. Tras establecer la conexión el portal de Azure reflejará los cambios indicando a su vez el trafico de entrada y salida que fluye a través de él.
 
- ![Menú nuevo](images/networking-create-virtualNetwork-site2site-Step11.png)
+ ![Menú nuevo](../images/networking-create-virtualNetwork-site2site-Step11.png)
  
 Si queremos probar que el sistema está funcionando de forma correcta podemos desplegar una nueva máquina virtual con Linux o Windows dentro de la red configurada en Azure y realizar un *Ping* desde ella hacia la máquina con OpenSwan y viceversa. La IP de esta nueva máquina creada sera la primera disponible dentro del rango que hemos seleccionado, la *192.168.0.4*
 
@@ -171,11 +174,11 @@ Si queremos probar que el sistema está funcionando de forma correcta podemos de
 ```bash
 ping 100.74.238.102
 ```
- ![Menú nuevo](images/networking-create-virtualNetwork-site2site-Step12.png)
+ ![Menú nuevo](../images/networking-create-virtualNetwork-site2site-Step12.png)
 - De la máquina remota a la recién creada
 
 ```bash
 ping 192.168.0.4
 ```
- ![Menú nuevo](images/networking-create-virtualNetwork-site2site-Step13.png)
+ ![Menú nuevo](../images/networking-create-virtualNetwork-site2site-Step13.png)
 

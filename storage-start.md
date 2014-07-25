@@ -1,6 +1,5 @@
 ---
 layout: default
-title: Storage
 ---
 
 # El servicio de almacenamiento de Azure Storage
@@ -17,10 +16,10 @@ Una vez vistos los principios básicos del almacenamiento puedes continuar con l
 
 ### Siguientes apartados: 
 
-- [Más detalles sobre los tipos de almacenamiento](storage-types.md "Tipos de almacenamiento Azure Storage") 
-- [Opciones de redundancia en el almacenamiento](storage-redundancy.md "Tipos de redundancia en Azure Storage") 
-- [Acceso remoto a nuestros datos almacenados](storage-remoteAccess.md "Acceso remoto a Azure Storage")
+- [Más detalles sobre los tipos de almacenamiento](../storage-types "Tipos de almacenamiento Azure Storage") 
+- [Opciones de redundancia en el almacenamiento](../storage-redundancy "Tipos de redundancia en Azure Storage") 
+- [Acceso remoto a nuestros datos almacenados](../storage-remoteAccess "Acceso remoto a Azure Storage")
 
 ### Guías paso a paso 
-- [Crear una cuenta de almacenamiento](storage-create-account.md "Crear una cuenta de almacenamiento") 
-- [Crear un nuevo contenedor](storage-create-container.md "Crear un contenedor") 
+- [Crear una cuenta de almacenamiento](../storage-create-account "Crear una cuenta de almacenamiento") 
+- [Crear un nuevo contenedor](../storage-create-container "Crear un contenedor") 

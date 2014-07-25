@@ -1,3 +1,6 @@
+---
+layout: default
+---
 #Redundancia de nuestros datos
 
 Una de las partes más importantes de subir nuestros datos a la nube es asegurarnos que se encuentran siempre disponibles y protegidos frente a fallos puntuales del hardware o a situaciones de desastre en el propio datacenter.

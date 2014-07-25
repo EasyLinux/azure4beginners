@@ -1,3 +1,6 @@
+---
+layout: default
+---
 # Las herramientas de consola
 
 Además de la gestión a través de la API REST o cualquiera de los SDKs disponible existe  la opción de emplear las utilidades de línea de comando multiplataforma, también conocida como *Azure Cross-Platform Command-Line Interface (xplat-cli)* 

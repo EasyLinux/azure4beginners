@@ -1,3 +1,6 @@
+---
+layout: default
+---
 # Grupos de disponibilidad
 
 Uno de los factores que debemos tener en cuenta a la hora de desplegar servicios, ya sea en la nube o en nuestras propias instalaciones, es la disponibilidad. Debemos de poner en práctica los procesos necesarios para que ante un posible fallo puntual del sistema éste pueda mantenerse en funcionamiento dando servicio.

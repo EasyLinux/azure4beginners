@@ -1,3 +1,6 @@
+---
+layout: default
+---
 # Almacenamiento en red
 
 Además de los servicios de almacenamiento que hemos comentado en [el apartado de tipos de almacenamiento](storagage-types.md "Tipos de almacenamiento"), actualmente se encuentra en vista previa el servicio de Azure Files.

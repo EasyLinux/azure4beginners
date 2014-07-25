@@ -1,3 +1,7 @@
+---
+layout: default
+---
+
 # Soporte de Linux en el servicio de máquinas virtuales
 
 A través de la galeria de Azure existe una colección de imágenes Linux proporcionadas por los diferentes partners colaboradores de Microsoft. Estas distribuciones han sido preparadas y probadas para su correcto funcionamiento nada más ser desplegadas. A dia de hoy está disponibles las siguientes:
