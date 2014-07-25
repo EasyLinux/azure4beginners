@@ -1,6 +1,5 @@
 ---
-layout: default
-title: Índice de contenidos
+layout: index
 ---
 
 # Índice de contenidos
