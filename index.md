@@ -1,3 +1,8 @@
+---
+layout: default
+title: Índice de contenidos
+---
+
 # Índice de contenidos
 
 1. Introducción a Microsoft Azure
@@ -10,7 +15,7 @@
 	- El portal de facturación
 3. Elementos básicos de infraestructura:
     - [Configuración del almacenamiento](storage-start.md "Configuración del almacenamiento")
-		- [Tipos de almacenamiento] (storage-types.md "Tipos de almacenamiento Azure Storage") 
+		- [Tipos de almacenamiento](storage-types.md "Tipos de almacenamiento Azure Storage") 
 		- [Opciones de redundancia](storage-redundancy.md "Tipos de redundancia en Azure Storage")
 		- [Acceso remoto a los datos almacenados](storage-remoteAccess.md "Acceso remoto a Azure Storage")
 		- Accediendo al almacenamiento a través de red con Azure Files
