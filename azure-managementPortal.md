@@ -1,3 +1,7 @@
+---
+layout:default
+---
+
 # El portal de gestión
 
 En nuestro dia a día trabajando con la plataforma, el portal de gestión será nuestro principal punto de interacción con todos los servicios que dispone Azure. En la siguiente captura de pantalla puedes ver de forma rápida cómo se estructura. Tras finalizar el registro de tu suscripción de pruebas te encontrarás con algo similar.

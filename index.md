@@ -8,7 +8,7 @@ layout: index
 2. Primeros pasos con Azure
     - [Registro](azure-register "Registro")
 	- [El portal de gestión](azure-managementPortal "El portal de gestión")
-	- El portal de facturación
+	- [El portal de facturación](azure-billingPortal "El portal de facturación")
 3. Elementos básicos de infraestructura:
     - [Configuración del almacenamiento](storage-start "Configuración del almacenamiento")
 		- [Tipos de almacenamiento](storage-types "Tipos de almacenamiento Azure Storage") 
