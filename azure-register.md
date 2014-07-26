@@ -1,3 +1,7 @@
+---
+layout: index
+---
+
 # Registrarse en Azure
 
 Azure ofrece una trial de prueba de un mes de duración y 150€ de consumo totalmente gratuitos. Durante este tiempo es posible hacer uso de cualquiera de los servicios disponibles sin ninguna restricción, únicamente dicho tope de crédito. Una vez pasados los 30 dias es posible continuar usando la plataforma en el modelo de pago por uso o cancelar la suscripción.

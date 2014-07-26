@@ -1,3 +1,7 @@
+---
+layout: index
+---
+
 # ¿Qué es Azure?
 
 Azure es una plataforma de nube o cloud computing caracterizada por su apertura y flexibilidad. Facilita el despliegue y gestión de nuestras aplicaciones o soluciones de infraestructura a nivel mundial a traves de los datacenters disponibles de Microsoft. Los mismos datacenters que Microsoft emplea para dar servicios a grandes soluciones como Skype, Bing, Xbox u Office 365.
