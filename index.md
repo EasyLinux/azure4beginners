@@ -4,12 +4,9 @@ layout: index
 
 # Índice de contenidos
 
-1. Introducción a Microsoft Azure
-    - ¿Qué es?
-    - ¿Qué ofrece?
-    - Azure y su modelo de apertura
+1. [Introducción a Microsoft Azure](azure-whatitis "Introducción a Microsoft Azure")
 2. Primeros pasos con Azure
-    - Registro
+    - [Registro](azure-register "Registro")
 	- El portal de gestión
 	- El portal de facturación
 3. Elementos básicos de infraestructura:
