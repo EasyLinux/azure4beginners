@@ -7,7 +7,7 @@ layout: index
 1. [Introducción a Microsoft Azure](azure-whatitis "Introducción a Microsoft Azure")
 2. Primeros pasos con Azure
     - [Registro](azure-register "Registro")
-	- El portal de gestión
+	- [El portal de gestión](azure-managementPortal "El portal de gestión")
 	- El portal de facturación
 3. Elementos básicos de infraestructura:
     - [Configuración del almacenamiento](storage-start "Configuración del almacenamiento")
