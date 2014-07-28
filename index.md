@@ -19,7 +19,7 @@ layout: index
 	    - [Tipos de redes virtuales](networking-types "Tipos de redes virtuales")
 		- [Crear de una red virtual en Azure](networking-create-virtualNetwork-cloud "Crear una red virtual en Azure")
 		- Creación de redes VPN
-			- [Conexión VPN Sitio a Sitio con OpenSwan](networking-create-virtualNetwork-site2site "Conexión VPN Sitio a Sitio con OpenSwan")
+			- [Conexión VPN Sitio a Sitio con OpenSwan / StrongSwan](networking-create-virtualNetwork-site2site "Conexión VPN Sitio a Sitio con OpenSwan")
 		- Interconectando redes virtuales
 			- Caso práctico en Azure
 			- Caso práctico con otras plataformas: AWS
@@ -47,3 +47,5 @@ layout: index
 	- Servicios cloud con Java, PHP, Python o Node.js
 	- Sitios Web con despliegue continuo desde Git, GitHub, TFS.
 	- Depliegue de soluciones como Wordpress, Umbraco, Joomla, Drupal.
+8. Colaboraciones
+    - Carlos Milán Figuerado, *Enterprise Team Lead*, [PlainConcepts](http://enterprise.plainconcepts.com/ "PlainConcepts"): Conexión VPN Sitio a Sitio con StrongSwan

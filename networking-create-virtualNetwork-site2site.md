@@ -1,15 +1,15 @@
 ---
 layout: default
 ---
-#Crear una red virtual sitio a sitio con OpenSwan
+#Crear una red virtual sitio a sitio con OpenSwan/StrongSwan
 
-A la hora de crear una red virtual sitio a sitio es posible realizarla a traves de alguno de los dispositivos hardware soportados o utilizando algún software VPN que lo permita. En el caso de Linux, configuraremos una red virtual sitio a sitio empleando OpenSwan. Para facilitar el trabajo emplearemos una máquina virtual creada en Azure que simule nuestro equipo local. El escenario será el siguiente:
+A la hora de crear una red virtual sitio a sitio es posible realizarla a traves de alguno de los dispositivos hardware soportados o utilizando algún software VPN que lo permita. En el caso de Linux, configuraremos una red virtual sitio a sitio empleando OpenSwan o StronSwan, dependiendo del tipo de enrutado que deseemos. Para facilitar el trabajo emplearemos una máquina virtual creada en Azure que simule nuestro equipo local. El escenario será el siguiente:
 
-- Máquina virtual configurada con OpenSwan que se conecte a la red virtual en Azure.
+- Máquina virtual configurada con OpenSwan o StronSwan que se conecte a la red virtual en Azure.
 - Red virtual desplegada en Azure habilitada para conexiones sitio a sitio.
 - Máquina virtual ejecutando Linux o Windows dentro de la red en Azure a la que nos conectaremos para demostrar el funcionamiento correcto de nuestra configuración.
 
-### Creación de la máquina virtual con OpenSwan
+### Creación de la máquina virtual
 
 Crearemos una nueva máquina virtual basándonos en la imagen disponible en la galería de Ubuntu 14.04. De una forma similiar lo podriamos hacer con cualquiera de las otras versiones de Linux disponibles. 
 
@@ -26,7 +26,8 @@ Para crear una nueva máquina virtual es necesario acceder [al panel de gestión
 - El siguiente paso será fijarnos en las IPs que Azure le ha asignado. Sera necesario tanto la pública, accesible desde Internet; como la interna, accesible desde el datacenter. Es posible encontrarlas en la página de información de la máquina virtual.
  
 ![Menú nuevo](../images/networking-create-virtualNetwork-site2site-Step3.png)
- 
+
+
 ### Configuración de la red local
 
 Para establecer la conexión sitio a sitio será necesario configurar dentro del portal la información relacionado con la red local que tendra acceso. 
@@ -60,10 +61,11 @@ Una vez que tenemos nuestra máquina con OpenSwan y la red local necesitamos cre
 
 ![Menú nuevo](../images/networking-create-virtualNetwork-site2site-Step9.png)
 
-- Volvemos al **Dashboard** de la red recién creada y seleccionaremos **Create Gateway>Static routing**. Mientras se crea procederemos a configurar OpenSwan.
+- Volvemos al **Dashboard** de la red recién creada y seleccionaremos **Create Gateway>Static routing**. Si es asi, necesitaremos utilizar OpenSwan para nuestra máquina virtual. Si seleccionamos **Create Gateway>Dynamic routing** necesitaremos utilizar StrongSwan ya que OpenSwan no soporta el enrutado dinámico.
 
 ![Menú nuevo](../images/networking-create-virtualNetwork-site2site-Step10.png)
 
+Dependiendo de lo que hayas seleccionado en el paso anterior elige el apartado correspondiente a continuacion:
  
 ### Configuración de OpenSwan.
 
@@ -137,7 +139,7 @@ conn vpn
  
 ```
 
-OpenSwan describe los extremos de nuestra conexión VPN como *left* y *right*. El izuqierdo se trata de la dirección IP interna de la máquina virtual configurada con OpenSwan. El derecho, la IP pública del Gateway creado por Azure. Esta dirección deberemos consultarla ya que será la que tengamos que añadir en la variable *right* para que la conexión se establezca de forma correcta. El resto de parámetros están asociados con la autenticación del túnel.
+OpenSwan describe los extremos de nuestra conexión VPN como *left* y *right*. El izqierdo se trata de la dirección IP interna de la máquina virtual configurada con OpenSwan. El derecho, la IP pública del Gateway creado por Azure. Esta dirección deberemos consultarla ya que será la que tengamos que añadir en la variable *right* para que la conexión se establezca de forma correcta. El resto de parámetros están asociados con la autenticación del túnel.
 
 - Finalmente configuraremos la clave compartida, *Pre-Shared Key (PSK)*, disponible en el portal de Azure. Para ello modificaremos el siguiente fichero:
 
@@ -163,6 +165,86 @@ sudo service ipsec restart
 sudo service ipsec status
 ```
 
+### Configuración de StrongSwan.
+
+Nos conectaremos a traves de SSH a la máquina remota recién instalada. El primer paso será hacer la instalación del software de StrongSwan. 
+
+- Ejecutamos el siguiente comando para que el gestor de paquetes obtenga e instale el software necesario.
+
+```bash
+sudo apt-get install strongSwan
+```
+
+- A continuación, indicamos que **No** a la hora de utilizar certificados como método de autenticación ya que securizaremos el tunel IPSec a traves de secreto compartido. Al final el proceso de instalación podemos comprobar que este se ha realizado de forma correcta comprobando que tenemos el comando *ipsec* disponible:
+
+```bash
+which ipsec
+```
+
+- Una vez instalado procederemos a modificar el fichero de configuración. Para ello usando *vi* u otro editor lo abrimos.
+
+```bash
+sudo vi /etc/ipsec.conf
+```
+
+El contenido de nuestro fichero lo tendremos que configurar de forma similiar al siguiente:
+
+```bash
+config setup
+        charonstart=yes
+        plutostart=no
+        
+```
+
+Tras ello, descomentamos el apartado de **conn** para incluir los parámetros especificos necesarios para nuestra VPN.
+
+```bash
+# ipsec.conf - strongSwan IPsec configuration file
+conn VPN
+   authby=secret
+   auto=start
+   type=tunnel
+   keyexchange=ikev2
+   keylife=3600s
+   ikelifetime=28800s
+   left=100.74.238.102
+   leftsubnet=100.74.238.0/24
+   leftnexthop=%defaultroute
+   right=23.100.15.126
+   rightsubnet=192.168.0.0/20
+   ike=aes256-sha1-modp1024
+   esp=aes256-sha1
+   pfs=no 
+```
+
+StrongSwan describe los extremos de nuestra conexión VPN como *left* y *right*. El izuqierdo se trata de la dirección IP interna de la máquina virtual configurada con StrongSwan. El derecho, la IP pública del Gateway creado por Azure. Esta dirección deberemos consultarla ya que será la que tengamos que añadir en la variable *right* para que la conexión se establezca de forma correcta. El resto de parámetros están asociados con la autenticación del túnel.
+
+- Finalmente configuraremos la clave compartida, *Pre-Shared Key (PSK)*, disponible en el portal de Azure. Para ello modificaremos el siguiente fichero:
+
+```bash
+sudo vi /etc/ipsec.secrets
+```
+
+- Necesitamos añadir lo siguiente:
+    
+```bash
+#include /etc/ipsec.d/*.secrets
+100.74.238.102 23.100.15.126 : PSK "XXXXXXXXXXXXXXXXXXXX"
+```
+   Es importante mantener la sintaxis correcta para evitar errores: *IPLocal IPGateway : PSK "Clave compartida"*
+   
+**Nota:** Es recomendable comprobar la IP del Gateway en el portal de Azure ya que es necesario usar esa para la configuración de la conexión. En el caso de que introduzcamos la incorrecta recibiremos un error a la hora de establecer la conexión.
+ 
+- Únicamente quedara importar la información dentro del servicio de ipsec y reiniciarlo antes de comprobar que el tunel esta configurado correctamente.
+
+```bash
+sudo ipsec secrets
+sudo service ipsec restart 
+sudo service ipsec status
+```
+
+### Comprobando la configuración
+
 Si la conexión se establece de forma correcta el último comando nos indicara que hay un túnel disponible. En el caso de que aparezca el mensaje de *"No tunnels up* será necesario revisar los pasos anteriores de configuración. Tras establecer la conexión el portal de Azure reflejará los cambios indicando a su vez el trafico de entrada y salida que fluye a través de él.
 
  ![Menú nuevo](../images/networking-create-virtualNetwork-site2site-Step11.png)
@@ -182,3 +264,4 @@ ping 192.168.0.4
 ```
  ![Menú nuevo](../images/networking-create-virtualNetwork-site2site-Step13.png)
 
+Después de que el túnel se encuentre en funcionamiento ya podremos trabajar con **iptables** para configurar las reglas de enrutado de nuestro tráfico entre Azure y nuestra propia red.
