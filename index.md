@@ -26,7 +26,7 @@ layout: index
 		- Asignación de IPs estáticas públicas y privadas
 4. [Despliegue de máquinas virtuales](virtualmachines-start "Despliegue de máquinas virtuales")
     - [Soporte de Linux en máquinas virtualess](virtualmachines-linux-supportedDistros "Soporte de Linux en máquinas virtuales") 
-	- Tipos de máquinas virtuales
+	- [Tipos de máquinas virtuales](virtualmachines-types "Tipos de máquinas virtuales")
 	- [Creación de una máquina virtual](virtualmachines-linux-create-UbuntuGnome "Creación de una máquina virtual") 
 	- [Gestión de los puertos de la máquina](virtualmachines-create-endpoints "Gestión de los puertos de la máquina")
 	- [Grupos de afinidad](virtualmachines-affinityGroups "Grupos de afinidad")
