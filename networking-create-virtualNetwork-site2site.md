@@ -91,7 +91,7 @@ sudo vi /etc/ipsec.conf
 
 El contenido sera similiar al siguiente:
 
-<pre>
+
 ```bash
 config setup
         protostack=netkey
@@ -119,7 +119,6 @@ config setup
         plutostderrlog=~/swan.log
         include /etc/ipsec.d/*.conf
 ```
-</pre>
 
 Será necesario configurar la opción de *virtual_private* con la IP interna de nuestra máquina virtual. También, es posible activar los logs descomentando la opción de *plutodebug*.
 
