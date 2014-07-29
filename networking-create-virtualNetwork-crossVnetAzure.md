@@ -26,7 +26,8 @@ En este caso, utilizaremos los siguientes rangos:
 |-------------|--------------------------|-------------------------|
 | VnetEurope  | VnetEurope (10.1.0.0/16) | VnetUsa (10.2.0.0/16)   |
 | VnetUsa     | VnetUsa (10.2.0.0/16)    | VnetEurope (10.1.0.0/16)|
- 
+
+
 El **Rango de red virtual** será el rango de direcciones IPs que será utilizado en esa red concreta; el *Rango de red local* será el rango que emplee la red remota a la que nos conectemos a traves del tunel VPN. Como vemos en la tabla, el rango de red virtual de una coincide con el rango de local de la otra.
 
 Una vez definidas nuestras redes procederemos a crearlas accediendo [al panel de gestión de Azure](http://manage.windowsazure.com "Panel de gestión de Azure") e iniciando la sesión. Una vez dentro, los pasos son los siguientes:
@@ -71,11 +72,11 @@ El siguien paso es asig82nar cada red local que hemos creado a su red correspond
 
 - Seleccionamos del panel lateral izquierdo la pestaña de **Networks** y dentro del listado nuestra red **VnetEurope**. En las opciones disponibles en el menú superior elegimos **Configure**.
 
- ![Menú nuevo](../images/networking-create-virtualNetwork-crossVnetAzure-Step8.png
+ ![Menú nuevo](../images/networking-create-virtualNetwork-crossVnetAzure-Step8.png)
 
 - En la sección de **Site-to-site Connectivity** marcamos el checkbox *Connect to the local network* y elegimos "VnetUsa".
 
- ![Menú nuevo](../images/networking-create-virtualNetwork-crossVnetAzure-Step9.png
+ ![Menú nuevo](../images/networking-create-virtualNetwork-crossVnetAzure-Step9.png)
  
 - Tras salvar los cambios deberemos repetir el proceso de configuración para la otra red.
 
@@ -104,7 +105,9 @@ Tras eso, el paso final es configurar la clave compartida entre ambos para la au
 En este último caso, los comandos necesarios serian los siguientes:
 
 ```bash
+
 Set-AzureVNetGatewayKey -VNetName VnetEurope -LocalNetworkSiteName VnetUsa -SharedKey cd0456eff95c5529ea9e918043e19cbe
+
 Set-AzureVNetGatewayKey -VNetName VnetUsa -LocalNetworkSiteName VnetEurope -SharedKey cd0456eff95c5529ea9e918043e19cbe
 ```
 
