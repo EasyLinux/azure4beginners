@@ -32,7 +32,7 @@ El **Rango de red virtual** será el rango de direcciones IPs que será utilizad
 
 Una vez definidas nuestras redes procederemos a crearlas accediendo [al panel de gestión de Azure](http://manage.windowsazure.com "Panel de gestión de Azure") e iniciando la sesión. Una vez dentro, los pasos son los siguientes:
 
-- Seleccionamos la opción de **New > Network Services > Virtual Network > Custom Create** disponibe en la parte inferior izquierda del panel.
+- Seleccionamos la opción de **New > Network Services > Virtual Network > Custom Create** disponible en la parte inferior izquierda del panel.
 
 ![Menú nuevo](../images/networking-create-virtualNetwork-crossVnetAzure-Step1.png)
 
@@ -105,7 +105,6 @@ Tras eso, el paso final es configurar la clave compartida entre ambos para la au
 En este último caso, los comandos necesarios serian los siguientes:
 
 ```bash
-
 Set-AzureVNetGatewayKey -VNetName VnetEurope -LocalNetworkSiteName VnetUsa -SharedKey cd0456eff95c5529ea9e918043e19cbe
 
 Set-AzureVNetGatewayKey -VNetName VnetUsa -LocalNetworkSiteName VnetEurope -SharedKey cd0456eff95c5529ea9e918043e19cbe
