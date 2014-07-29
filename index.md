@@ -21,7 +21,7 @@ layout: index
 		- Creación de redes VPN
 			- [Conexión VPN Sitio a Sitio con OpenSwan / StrongSwan](networking-create-virtualNetwork-site2site "Conexión VPN Sitio a Sitio con OpenSwan")
 		- Interconectando redes virtuales
-			- Caso práctico en Azure
+			- [Caso práctico en Azure](networking-create-virtualNetwork-crossVnetAzure "Caso práctico en Azure")
 			- Caso práctico con otras plataformas: AWS
 		- Asignación de IPs estáticas públicas y privadas
 4. [Despliegue de máquinas virtuales](virtualmachines-start "Despliegue de máquinas virtuales")
