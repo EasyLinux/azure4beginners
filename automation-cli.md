@@ -12,12 +12,13 @@ En el caso de Windows u OS X existe un paquete de instalación disponible que fa
 
 Tras ello, únicamente necesitaremos ejecutar el siguiente comando:
 
-```bash
+```
 sudo npm install azure-cli -g
 ```
 
 Es posible comprobar que la instalación se ha realizado de forma correcta ejecutando el comando **azure** sin ningún tipo de parámetro. La salida sera algo similar a lo siguiente:
-```bash
+
+```
 info:             _    _____   _ ___ ___
 info:            /_\  |_  / | | | _ \ __|
 info:      _ ___/ _ \__/ /| |_| |   / _|___ _ _
@@ -64,7 +65,7 @@ Para obtener el fichero de configuración es necesario ejecutar el siguiente com
 
 Tras completarse la descarga sera necesario importar el fichero de configuración con los detalles de tu suscripción a través del comando: 
 
-```bash
+```
 azure account import [ruta al fichero .publishsettings]
 ```
 
@@ -74,7 +75,7 @@ Una vez finalizado podremos acceder a nuestros recursos en Azure.
 
 Al ejecutar el comando de **azure** sin parámetros se nos muestra una pequeña ayuda con las opciones disponibles. A continuación está un resumen de la salida del mismo:
 
-```bash
+```
 help:    Commands:
 help:      account        Commands to manage your account information and publish settings
 help:      config         Commands to manage your local settings
@@ -93,13 +94,13 @@ Cada uno de los comandos listados es un comando de alto nivel que nos sirve para
 
 De forma general, los comandos tienen la siguiente estructura:
 
-```bash
+```
 azure <comando> <operación> [parámetros]
 ```
 
 Sin embargo, es posible que algunos comandos tengan subcomnados disponibles por lo que la estructura se veria modificada quedando:
 
-```bash
+```
 azure <comando> <subcomando> <operación> [parámetros]
 ```
 
@@ -115,7 +116,7 @@ Aunque es posible interactuar de forma manual con nuestros recursos en Azure a t
 
 Por ejemplo, es posible seleccionar todos los sitios web desplegados en Azure que estén en ejecucción e indicarles que se paren de la siguiente forma. 
 
-```bash
+```
 azure site list | grep 'Running' | awk '{system("azure site stop "$2)}'
 ```
 
@@ -130,7 +131,7 @@ Es posible obtener más detalles haciendo uso del parámetro *--verbose*.
 
 When creating scripts, you often need to capture the output of a command and either pass this to another command or perform an operation on the output such as checking for a specific value. The xplat-cli generates output to STDOUT and STDERR. Each line is prefixed by the strings info: for informational status messages, or data: for data returned about a service; however, you can instruct the xplat-cli to return more verbose information by using the --verbose or -v parameter. This will return additional information prefixed by the string verbose:.
 
-```bash
+```
 info:    Executing command site list
 verbose: Subscription ####################################
 verbose: Enumerating sites
@@ -165,14 +166,13 @@ data:    Name           Status   Mode  Host names
 data:    -------------  -------  ----  -------------------------------
 data:    myawesomesite  Running  Free  myawesomesite.azurewebsites.net
 info:    site list command OK
-
 ```
 
 Las herramientas de línea de consola trabajan por debajo con información en formato JSON. Si estamos interesados en tratar directamente con este tipo de resultado en lugar  del formato a traves de la salida estándar podemos emplear el parámaetro *--json*
 
 Gracias a ello, podemos encadenar la salida con comandos como **jsawk** y procesar de una forma más sencilla los resultados.
 
-```bash
+```
 azure site list --json | jsawk -n 'out(this.Name)' | xargs -L 1 azure site delete -q 
 ```
 
