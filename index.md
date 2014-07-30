@@ -34,13 +34,10 @@ layout: index
 	- Creación de imágenes personalizadas
 		- [Capturar una imagen de una máquina virtual con Linux en Azure](virtualmachines-linux-create-linuxImage "Capturar una imagen de una máquina virtual con Linux en Azure")
 		- Subir máquinas on-premise
-5. Migración de máquinas a Azure
-	- Caso práctico desde soluciones VMWare
-	- Caso práctico desde Amazon Web Services
-6. Automatización de los procesos
+5. Automatización de los procesos
 	- [La API Rest](automation-api-rest "La API Rest")
 	- [SDKs disponibles ](automation-sdks "SDKs disponibles ")
 	- [Las herramientas de CLI](automation-cli "Las herramientas de CLI")
 	- [Integración con Chef](automation-chef "Integración con Chef")
-7. Colaboraciones
+6. Colaboraciones
     - Carlos Milán Figuerado, *Enterprise Team Lead*, [PlainConcepts](http://enterprise.plainconcepts.com/ "PlainConcepts"): Conexión VPN Sitio a Sitio con StrongSwan
