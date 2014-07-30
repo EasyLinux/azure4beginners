@@ -14,7 +14,6 @@ layout: index
 		- [Tipos de almacenamiento](storage-types "Tipos de almacenamiento Azure Storage") 
 		- [Opciones de redundancia](storage-redundancy "Tipos de redundancia en Azure Storage")
 		- [Acceso remoto a los datos almacenados](storage-remoteAccess "Acceso remoto a Azure Storage")
-		- Accediendo al almacenamiento a través de red con Azure Files
 	- [Configuración de la red](networking-start "Configuración de la red")
 	    - [Tipos de redes virtuales](networking-types "Tipos de redes virtuales")
 		- [Crear de una red virtual en Azure](networking-create-virtualNetwork-cloud "Crear una red virtual en Azure")
@@ -22,8 +21,8 @@ layout: index
 			- [Conexión VPN Sitio a Sitio con OpenSwan / StrongSwan](networking-create-virtualNetwork-site2site "Conexión VPN Sitio a Sitio con OpenSwan")
 		- Interconectando redes virtuales
 			- [Caso práctico en Azure](networking-create-virtualNetwork-crossVnetAzure "Caso práctico en Azure")
-			- Caso práctico con otras plataformas: AWS
-		- Asignación de IPs estáticas públicas y privadas
+			- [Caso práctico con otras plataformas: AWS](networking-create-virtualNetwork-crossVnetAWS "Caso práctico con otras plataformas: AWS")
+		- [Asignación de IPs estáticas públicas y privadas](networking-ipAddressing "Asignación de IPs estáticas públicas y privadas")
 4. [Despliegue de máquinas virtuales](virtualmachines-start "Despliegue de máquinas virtuales")
     - [Soporte de Linux en máquinas virtualess](virtualmachines-linux-supportedDistros "Soporte de Linux en máquinas virtuales") 
 	- [Tipos de máquinas virtuales](virtualmachines-types "Tipos de máquinas virtuales")
@@ -43,9 +42,5 @@ layout: index
 	- [SDKs disponibles ](automation-sdks "SDKs disponibles ")
 	- [Las herramientas de CLI](automation-cli "Las herramientas de CLI")
 	- [Integración con Chef](automation-chef "Integración con Chef")
-7. Evolución de IaaS a PaaS
-	- Servicios cloud con Java, PHP, Python o Node.js
-	- Sitios Web con despliegue continuo desde Git, GitHub, TFS.
-	- Depliegue de soluciones como Wordpress, Umbraco, Joomla, Drupal.
-8. Colaboraciones
+7. Colaboraciones
     - Carlos Milán Figuerado, *Enterprise Team Lead*, [PlainConcepts](http://enterprise.plainconcepts.com/ "PlainConcepts"): Conexión VPN Sitio a Sitio con StrongSwan
