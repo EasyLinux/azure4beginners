@@ -178,6 +178,7 @@ code  {
     padding: 1em;
     margin: 1.2em 1em;
     width: 50%; /* or whatever you prefer */
+	float: left;
 }
 /*
 code {
