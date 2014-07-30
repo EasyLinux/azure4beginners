@@ -177,7 +177,7 @@ code  {
     border-radius: 1em; /* just in case */
     padding: 1em;
     margin: 1.2em 1em;
-    width: 50%; /* or whatever you prefer */
+    width: 100% /* or whatever you prefer */
 	float: left;
 }
 /*
